@@ -14,8 +14,11 @@ prepare:
 	python3 -m pip install -r requirements.txt
 
 database:
-	./app/manage.py makemigrations
-	./app/manage.py migrate
+	rm -f ./*/migrations/[0-9]*
+	rm -f ./data.db
+
+	./manage.py makemigrations
+	./manage.py migrate
 
 install:
 	make prepare

@@ -2,8 +2,6 @@
 .code/
 venv/
 
-manage.py
-
 core/manager/__pycache__
 core/migrations/__pycache__
 
